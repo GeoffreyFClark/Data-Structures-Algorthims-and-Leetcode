@@ -1,1 +1,1 @@
-# Data Structures and Algorthims via LeetCode
+## Data Structures and Algorthims Practice via LeetCode Puzzles
