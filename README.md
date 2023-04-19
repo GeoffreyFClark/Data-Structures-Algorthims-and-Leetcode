@@ -2,4 +2,4 @@
 
 ~~: TODO Solve
 
-~: TODO Optimize the time complexity of the function to achieve reduced O complexity.
+~: TODO Optimize to achieve reduced O complexity.
