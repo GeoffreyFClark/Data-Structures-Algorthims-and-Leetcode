@@ -6,7 +6,7 @@
 
 ---
 
-### Commonly asked technical interview concepts and related LeetCode puzzles:
+### Frequently asked concepts and related LeetCode puzzles:
 
 Array:
 
