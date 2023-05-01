@@ -1,4 +1,4 @@
-## Data Structures and Algorithms Practice via LeetCode Puzzles
+## Data Structures and Algorithms Practice
 
 ~: TODO Optimize to achieve reduced O complexity.
 
@@ -6,7 +6,7 @@
 
 ---
 
-### Frequently asked concepts and related LeetCode puzzles:
+Recommended:
 
 Array:
 
