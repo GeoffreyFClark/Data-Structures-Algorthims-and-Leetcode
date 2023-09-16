@@ -44,3 +44,46 @@ https://ucarecdn.com/8f158b8a-7e6b-4f6b-90a9-19be5985562d/
 
 // Sample Output:
 // [null, null, null, 1, false]
+
+#include <iostream>
+#include <vector>
+#include <sstream>
+using namespace std;
+
+class CircularArrayQueue {
+private:
+    vector<int> queue;
+    int front;
+    int back;
+    const int CAPACITY;
+
+public:
+    CircularArrayQueue(int capacity = 10); // Default capacity is 10
+    bool isEmpty() const;
+    void enqueue(int x);
+    void dequeue();
+    int peekFront() const;
+};
+
+CircularArrayQueue::CircularArrayQueue(int capacity) : CAPACITY(capacity) {
+    queue.resize(capacity);
+    front = 0;
+    back = capacity - 1;
+}
+
+bool CircularArrayQueue::isEmpty() const {
+    return front == (back + 1) % CAPACITY;
+}
+
+void CircularArrayQueue::enqueue(int x) {
+    back = (back + 1) % CAPACITY;
+    queue[back] = x;
+}
+
+void CircularArrayQueue::dequeue() {
+    front = (front + 1) % CAPACITY;
+}
+
+int CircularArrayQueue::peekFront() const {
+    return queue[front];
+}

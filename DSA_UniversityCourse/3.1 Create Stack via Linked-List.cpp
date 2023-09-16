@@ -1,5 +1,6 @@
 // Implementing a Stack using a Linked List
-// In this problem you will be implementing a Stack using a Singly Linked List. Implement the following functionalities of a stack ADT using a singly linked list.
+// In this problem you will be implementing a Stack using a Singly Linked List. 
+// Implement the following functionalities of a stack ADT using a singly linked list.
 
 // push(x) -- Push element x on the stack.
 // pop() -- Remove the element from the top of the stack.

@@ -33,3 +33,23 @@
 
 // Sample Output:
 // true
+
+#include <queue>
+#include <iostream>
+#include <stack>
+#include <string> 
+using namespace std;
+
+bool checkValidity(queue<int> q) {
+    if (q.size() == 0 || q.size() == 1) {return true;}
+    int temp = q.front();
+    
+    while (temp != q.back()) {
+        q.pop();
+        if (q.front() < temp) {
+            return false;
+        }
+        temp = q.front();
+    }
+    return true;
+}
