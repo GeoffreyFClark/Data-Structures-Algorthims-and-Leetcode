@@ -1,2 +1,0 @@
-## Data Structures & Algorithms in Python: Udemy Course by Scott Barrett
-DS&A Puzzles/Practice space inspired by Scott Barrett's Udemy course material found at https://www.udemy.com/course/data-structures-algorithms-python/
