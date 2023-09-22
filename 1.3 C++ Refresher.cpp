@@ -1,4 +1,4 @@
-// 1.3 C++ Refresher
+// 1.3 C++ Refresher 
 
 // 1.3.1 Pointers
 // Here, we'll start a quick review on how to use pointers.
