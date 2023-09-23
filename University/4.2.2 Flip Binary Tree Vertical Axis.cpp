@@ -57,3 +57,28 @@
 // Sample Output:
 // [1,3,2,7,6,5,4]
 
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <queue>
+using namespace std;
+
+class TreeNode {
+ public:
+   int val;
+   TreeNode *left;
+   TreeNode *right;
+   TreeNode() : val(0), left(nullptr), right(nullptr) {}
+   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ };
+
+void Flip(TreeNode* root) {
+    if (root != nullptr) {
+        TreeNode* temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+
+        Flip(root->left);
+        Flip(root->right);
+    }
+}
