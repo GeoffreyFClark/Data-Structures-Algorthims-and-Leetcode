@@ -41,32 +41,11 @@ using namespace std;
  };
 
 TreeNode* insert(TreeNode* root, int key) {
-    // base case - if root is nullptr
-    if (root == nullptr) {
-        return new TreeNode(key);
-    }
-
-    TreeNode *current = root;
-
-    // traverse BST to find the appropriate position for the key
-    while (current != nullptr) {
-        if (key > current->val) {
-            if (current->right == nullptr) {
-                current->right = new TreeNode(key);
-                break;
-            } else {
-                current = current->right;
-            }
-        } 
-        else if (key < current->val) {
-            if (current->left == nullptr) {
-                current->left = new TreeNode(key);
-                break;
-            } else {
-                current = current->left;
-            }
-        }
-    }
-
-    return root;
+  if (root == nullptr)
+    return new TreeNode(key);
+  if (root->val < key)
+    root->right = insert(root->right, key);
+  else 
+    root->left = insert(root->left, key);
+  return root;
 }
