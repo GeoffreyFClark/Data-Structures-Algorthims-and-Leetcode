@@ -1,11 +1,5 @@
 ## Data Structures and Algorithms Practice
 
-~: TODO Optimize to reduce complexity.
-
-~~: TODO Solve.
-
----
-
 Recommended:
 
 Array:
