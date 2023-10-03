@@ -19,20 +19,15 @@ Output: [0,1]
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # counter = 0
-        # for i in nums[counter:]:
-        #     counter2 = counter+1
-        #     for j in nums[counter2:]:
-        #         if i + j == target:
-        #             answer = [counter,counter2]
-        #             return answer
-        #         counter2+=1
-        #     counter+=1
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i, j]
 
         mydict = {}
         for index, integer in enumerate(nums):
-            if integer <= target:
-                mydict[integer] = index
-            if (target - integer) in mydict and mydict[target - integer] != index:
-                answer = [mydict.get(target - integer), index]
-                return answer
+            complement = target - integer
+            if complement in mydict:
+                return [mydict[complement], index]
+            mydict[integer] = index
+
