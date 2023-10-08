@@ -19,17 +19,19 @@ Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
 
+# Sliding window technique
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        longest = 0
-        counter = 0
-        prior_letters = []
-        for letter in s:
-            if letter not in prior_letters:
-                counter +=1
-                prior_letters.append(letter)
-            elif letter in prior_letters:
-                if counter > longest:
-                    longest = counter
-                counter = 1
-        return longest
+        if not s:
+            return 0
+
+        longest_length = 0
+        first_unrepeated = 0
+        prior_chars = {}
+
+        for current_index, char in enumerate(s):
+            if char in prior_chars and prior_chars[char] >= first_unrepeated:
+                first_unrepeated = prior_chars[char] + 1
+            prior_chars[char] = current_index
+            longest_length = max(longest_length, current_index - first_unrepeated + 1)
+        return longest_length

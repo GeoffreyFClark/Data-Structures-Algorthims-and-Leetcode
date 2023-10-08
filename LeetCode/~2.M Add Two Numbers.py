@@ -24,26 +24,3 @@ Output: [8,9,9,9,0,0,0,1]
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-
-        # Attempt 1
-        # l1.reverse()
-        # l2.reverse()
-        # ''.join(l1)
-        # ''.join(l2)
-        # sum = int(l1)+int(l2)
-        # sum = [int(i) for i in str(sum)]
-        # sum.reverse()
-        # return sum
-
-        # Attempt 2
-        def addTwoNumCalc(moredigits, lessdigits):
-            uprdgtlen = len(moredigits)
-            lwrdgtlen = len(lessdigits)
-            r = 0
-            sum = []
-            for i in range(lwrdgtlen):
-                moredigits[uprdgtlen - i] + lessdigits[lwrdgtlen - i] + r
-                sum.append(
-
-        if len(l1) > len(l2):
-            
